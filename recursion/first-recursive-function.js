@@ -10,6 +10,13 @@ function sumArrayOfNums(arr, index = 0, sum = 0){
 
     // action
     sum += arr[index]
+    console.log(sum)
 
-    //
+    // recursive case
+    // must use return keyword
+    // so that the final return value is returned
+    // otherwise, final return value won't go behind second-to-last recursive call
+    return sumArrayOfNums(arr, index + 1, sum)
 }
+
+console.log(sumArrayOfNums([2, 4, 5, 8]))
