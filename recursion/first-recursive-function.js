@@ -8,5 +8,8 @@ function sumArrayOfNums(arr, index = 0, sum = 0){
         return sum
     }
 
-    
+    // action
+    sum += arr[index]
+
+    //
 }
