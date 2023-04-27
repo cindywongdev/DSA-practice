@@ -40,9 +40,37 @@ function findMax(arr){
 
 console.log("Max is:", findMax([-1, -4, -2]))
 
-function factorial(){
+function factorial(n){
     // This function returns the factorial of a given number.
+    let factorial = 0
+    let number = n
+
+    // handle exception: if n = 1
+    if (n === 1) {
+        return 1
+    }
+
+    function rFactorial(currFactorialValue = number){
+        // base case
+        if (number === 1) {
+            return factorial
+        } else {
+            // action
+            factorial = currFactorialValue * (number - 1)
+            console.log("f value:", factorial)
+            // decrement number
+            number -= 1
+            console.log("number is:", number)
+
+            // recursive case
+            return rFactorial(factorial)
+        }
+    }
+
+    return rFactorial()
 }
+
+console.log("Factorial is:", factorial(5))
 
 function fibonacci(){
     // This function returns the Nth number in the fibonacci sequence.
