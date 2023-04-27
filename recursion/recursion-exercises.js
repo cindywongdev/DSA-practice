@@ -77,9 +77,41 @@ function fibonacci(n){
     // For this function, the first two fibonacci numbers are 1 and 1
 
     let finalValue = 0
+    let currPosition = 2
+    let fibArr = [1, 1]
 
+    // handle special cases
+    if (n === 1) {
+        return finalValue = fibArr[0]
+    }
+
+    if (n === 2) {
+        return finalValue = fibArr[1]
+    }
+
+    function rFibonacci(){
+        // base case
+        if (currPosition === n){
+            return finalValue
+        }
+
+        // action
+        // reassign finalValue to the sum of the element 2 indexes to the left and the element 1 index to the left
+        finalValue = fibArr[currPosition - 2] + fibArr[currPosition - 1]
+        // push that value into the array so future recursive calls can use it
+        fibArr.push(finalValue)
+
+        currPosition += 1
+
+        // recursive case
+        return rFibonacci()
+    }
     
+    // call r helper function
+    return rFibonacci()
 }
+
+console.log("final value is:", fibonacci(8))
 
 function coinFlips(){
     // This function returns an array of all possible outcomes from flipping a coin N times.
