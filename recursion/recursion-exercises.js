@@ -43,24 +43,23 @@ console.log("Max is:", findMax([-1, -4, -2]))
 function factorial(n){
     // This function returns the factorial of a given number.
     let factorial = 0
-    let number = n
 
     // handle exception: if n = 1
     if (n === 1) {
         return 1
     }
 
-    function rFactorial(currFactorialValue = number){
+    function rFactorial(currFactorialValue = n){
         // base case
-        if (number === 1) {
+        if (n === 1) {
             return factorial
         } else {
             // action
-            factorial = currFactorialValue * (number - 1)
+            factorial = currFactorialValue * (n - 1)
             console.log("f value:", factorial)
-            // decrement number
-            number -= 1
-            console.log("number is:", number)
+            // decrement n
+            n -= 1
+            console.log("n is:", n)
 
             // recursive case
             return rFactorial(factorial)
@@ -72,10 +71,14 @@ function factorial(n){
 
 console.log("Factorial is:", factorial(5))
 
-function fibonacci(){
+function fibonacci(n){
     // This function returns the Nth number in the fibonacci sequence.
     // https://en.wikipedia.org/wiki/Fibonacci_number
     // For this function, the first two fibonacci numbers are 1 and 1
+
+    let finalValue = 0
+
+    
 }
 
 function coinFlips(){
