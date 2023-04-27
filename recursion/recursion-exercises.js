@@ -5,7 +5,9 @@
 function findMax(arr){
     // This function returns the largest number in a given array.
     let index = 0
-    let max = 0
+    // assign max to first element of array
+    // because if we assign max 0, it wont work for an array of negative numbers, because 0 is larger than all negatives
+    let max = arr[0]
 
     function rMax(){
         // base case
@@ -18,7 +20,7 @@ function findMax(arr){
         // if (arr[index] > max) {
         //     max = arr[index]
         // }
-        
+
         // ternary expression ver
         max = arr[index] > max ? arr[index] : max
 
@@ -36,7 +38,7 @@ function findMax(arr){
     return rMax()
 }
 
-console.log("Max is:", findMax([3,4,27,13,84,1,2]))
+console.log("Max is:", findMax([-1, -4, -2]))
 
 function factorial(){
     // This function returns the factorial of a given number.
