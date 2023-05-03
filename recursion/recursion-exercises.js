@@ -151,9 +151,31 @@ function coinFlips(n){
 
 console.log(coinFlips(2))
 
-function letterCombinations(){
+function letterCombinations(arr){
     // This function returns an array of all combinations of the given letters
     // Input type: Array of single characters
     // For example, letterCombinations(["a","b","c"]) would return the following:
     // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
+    
+    // handle exception
+    if (arr.length === 0){
+        return ['']
+    }
+
+    // initialize variables
+    let outcomes = []
+
+    // recursive helper function
+    function rCombine(i = 0, outcomes, current){
+        if (i === arr.length - 1){
+            arr.map((letter) => outcomes.push(current + letter))
+        } else {
+            arr.map((letter) => rCombine(i + 1, outcomes, current + letter))
+        }
+    }
+
+    rCombine(0, outcomes, '')
+    return outcomes
 }
+
+console.log(letterCombinations(['a', 'b']))
