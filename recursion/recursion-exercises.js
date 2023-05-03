@@ -113,14 +113,43 @@ function fibonacci(n){
 
 console.log("final value is:", fibonacci(8))
 
-function coinFlips(){
+function coinFlips(n){
     // This function returns an array of all possible outcomes from flipping a coin N times.
     // Input type: Integer
     // For example, coinFlips(2) would return the following:
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"
+
+    // handle exception
+    if (n <= 0) {
+        return ['']
+    }
+
+    // initialize variables
+    let outcomes = []
+
+    function rCoinFlip(n, outcomes, current){
+        // base case
+        if (n === 1){
+            // this runs for the last flip, so add the result to the array
+            outcomes.push(current + "H")
+            outcomes.push(current + "T")
+        // here we NEED the else clause because the if clause doesn't have a return, so all of function will run even if base case is hit, recurring into infinity
+        } else {
+            // action
+            // recursive cases
+            // current ACCUMULATES with each recursive call, covering both the H and T branches, each time
+            rCoinFlip(n - 1, outcomes, current + "H")
+            rCoinFlip(n - 1, outcomes, current + "T")
+        }
+    }
+
+    rCoinFlip(n, outcomes, '')
+    return outcomes
 }
+
+console.log(coinFlips(2))
 
 function letterCombinations(){
     // This function returns an array of all combinations of the given letters
