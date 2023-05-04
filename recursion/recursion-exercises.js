@@ -174,6 +174,7 @@ function letterCombinations(arr){
         }
     }
 
+    console.log("outside of r helper")
     rCombine(0, outcomes, '')
     return outcomes
 }
