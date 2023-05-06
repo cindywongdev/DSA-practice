@@ -173,8 +173,7 @@ function letterCombinations(arr){
             arr.map((letter) => rCombine(i + 1, outcomes, current + letter))
         }
     }
-
-    console.log("outside of r helper")
+    
     rCombine(0, outcomes, '')
     return outcomes
 }
