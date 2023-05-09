@@ -173,9 +173,10 @@ function letterCombinations(arr){
             arr.map((letter) => rCombine(i + 1, outcomes, current + letter))
         }
     }
-    
+
     rCombine(0, outcomes, '')
     return outcomes
 }
 
 console.log(letterCombinations(['a', 'b']))
+console.log(letterCombinations(['a', 'b', 'c']))
