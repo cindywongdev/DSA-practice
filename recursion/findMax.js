@@ -34,4 +34,6 @@ function findMax(arr){
     return rMax()
 }
 
+console.log(findMax([1,9,-8,2]))
+
 module.exports = findMax
