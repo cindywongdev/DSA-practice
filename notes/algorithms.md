@@ -105,7 +105,7 @@
     * ex. sorting a deck of cards numerically, and THEN sorting them by suits 
         * end result of a stable sort: they would be divided into groups by suits, and each group would be sorted numerically
 
-* Quick Review of Time & Space Complexity
+* Quick Review of Time & Space Complexity + More
     * Time Complexity: given an input of size N, the max # of calculations you will need to perform
     * Space Complexity Types
         * In place
@@ -115,3 +115,17 @@
         * Out of place
             * big O complexities: 0(N), 0(N^2)
             * the algorithm uses an extra array (or more) into which to sort the values
+    * The Worst, Best, and Average
+        * Best case: Big Omega Ω
+            * describes how efficiently an algo would run if it performed the fewest possible actions on a data set
+                * ex. sorting an already sorted set
+        * Average case: Big Theta Θ
+            * describes the typical runtime of an algorithm
+* Other Considerations When Choosing A Sort
+    * Stability (whether or not items stay in order)
+    * Sorting method (comparison, distribution, or a combo of the two)
+    * The data itself:
+        * Size (small, very large)
+        * Structure (sorted, unsorted, only one out of place, few unique values, etc.) See [this cool video](https://www.youtube.com/watch?v=ZZuD6iUe3Pc&embeds_referring_euri=https%3A%2F%2Fmy.generalassemb.ly%2F&embeds_referring_origin=https%3A%2F%2Fmy.generalassemb.ly&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=ViktorBohush)
+* There is no perfect sort
+    * Different sorts are good at different things
