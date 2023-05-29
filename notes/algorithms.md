@@ -88,3 +88,30 @@
         * Ex.
             * Calculating all possible combinations of elements
             * Checking all possible routes between two destinations
+
+### Intro to Sorting Algorithms
+
+* The 2 Major Types
+    * Comparison Sort
+        * compares 2 items and decides which one to put first
+    * Distribution Sort
+        * groups items based on some characteristic about the items (ex. color)
+    * These 2 sorts function differently
+        * Thus, they are better suited for different types of data sets.
+
+* Stability
+    * preserves the initial order of a collection
+    * allows you to sort by one factor first, and then another, while preserving the order of the first
+    * ex. sorting a deck of cards numerically, and THEN sorting them by suits 
+        * end result of a stable sort: they would be divided into groups by suits, and each group would be sorted numerically
+
+* Quick Review of Time & Space Complexity
+    * Time Complexity: given an input of size N, the max # of calculations you will need to perform
+    * Space Complexity Types
+        * In place
+            * big O complexities: 0(1) or 0(log(N))
+            * algorithm takes a predictable amount of space
+            * this space does not depend on the size of the input
+        * Out of place
+            * big O complexities: 0(N), 0(N^2)
+            * the algorithm uses an extra array (or more) into which to sort the values
