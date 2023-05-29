@@ -100,7 +100,7 @@
         * Thus, they are better suited for different types of data sets.
 
 * Stability
-    * preserves the initial order of a collection
+    * preserves the sorted order of a collection as you complete more iterations
     * allows you to sort by one factor first, and then another, while preserving the order of the first
     * ex. sorting a deck of cards numerically, and THEN sorting them by suits 
         * end result of a stable sort: they would be divided into groups by suits, and each group would be sorted numerically
@@ -129,3 +129,38 @@
         * Structure (sorted, unsorted, only one out of place, few unique values, etc.) See [this cool video](https://www.youtube.com/watch?v=ZZuD6iUe3Pc&embeds_referring_euri=https%3A%2F%2Fmy.generalassemb.ly%2F&embeds_referring_origin=https%3A%2F%2Fmy.generalassemb.ly&source_ve_path=MjM4NTE&feature=emb_title&ab_channel=ViktorBohush)
 * There is no perfect sort
     * Different sorts are good at different things
+
+### Basic Sorting Algorithms (Bubble & Insertion Sort)
+
+* like the long division of basic sorts:
+    * slow, inefficient, infrequently used
+    * but are important to understand the foundations of sorting algos and prepare you to understand more complex sorting algos
+* Bubble Sort
+    * iterates through a data set and compares neighboring numbers, swapping current number with the next one if the next one is smaller
+    * basic process
+        * 1. Start at the beginning of an array of items
+        * 2. Compare the current item you're looking at to the next item on the list (item at index i vs. i + 1)
+        * 3. If current item is smaller than the next item, keep it in place. If it's greater, swap the two.
+        * 4. Move on to the next item.
+        * 5. Once end of array is reached, go BACK to beginning of array and repeat steps 1-4 until you can go through the whole list without making any swaps.
+    * Stability: stable
+        * items remain sorted as you iterate through array multiple times
+    * Big O Space Complexity: 0(1)
+        * Why? Bc we didn't have to find a new space for any of the elements while sorting them. The amount of space used doesn't change as the input increases (we sort in place using the original array), so the space efficiency is 0(1).
+    * Big O Time Complexity: 0(N^2)
+
+* Insertion Sort
+    * iterates through data set and inserts each item into the right place in the array
+        * it's like drawing a hand of cards and sorting them into your hand on each new draw
+        * also not efficient, but def faster than bubble sort and works for more situations
+        * is mainly used IRL in conjunction with bucket sort
+    * Process
+        * 1. Start at beginning of array
+        * 2. Splits array into two sections: a sorted and unsorted one. Sorted on is the first element by default.
+        * 3. Moves on to next element (becomes current element), finds the FIRST item that is smaller than current element and places it after that item. If there is no smaller item to be found, place current item at beginning of sorted section.
+        * 4. Repeat step 3 until all items are sorted.
+    * Stability: stable
+        * items remain sorted as you move onto next element and sort that one
+    * Big O Space Complexity: 0(1)
+        * again, you're not creating new space for the elements, you're using the existing space (sorting in place), so space remains constant
+    * Big O Time Complexity: 0(N^2)
