@@ -31,3 +31,5 @@ function bubbleSort(array) {
 }
 
 console.log(bubbleSort([ 12, 6, 3, 7, 13, 8 ]))
+console.log(bubbleSort([ -12, 6, 3, 7, 0, -13, 8 ]))
+console.log(bubbleSort([ -12, -6, -3, -7, -0, 0, -13, -8 ]))
