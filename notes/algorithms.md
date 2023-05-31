@@ -185,4 +185,19 @@
         * use when theres no one obvious way to create your buckets
         * use the square root of the # of items to sort
             * ex. 100 items => 10 buckets
-    
+
+* Bucket Sort
+    * When to use
+        * when you have a relatively dense range of numbers
+        * meaning the values in your array are relatively close together
+            * don't use on data set whose numbers are very far apart
+            * BUT ALSO don't use on data sets that are TOO dense
+                * e.g. have a lot of the same number, or very close together
+                * because they would all be sorted into the same bucket!
+                * this is the wost case scenario for bucket sort, resulting in a 0(N^2) runtime
+    * How It Works
+        * 1. Start with initial array
+        * 2. Set up an array of initially empty buckets aka arrays. (Uhh one array of empty subarrays?)
+        * 3. Go over the original array and scatter each object into its corresponding bucket.
+        * 4. Sort each bucket.
+        * 5. Gather: go through the buckets sequentially and gather everything back into the original single input array.
