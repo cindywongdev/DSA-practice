@@ -201,3 +201,13 @@
         * 3. Go over the original array and scatter each object into its corresponding bucket.
         * 4. Sort each bucket.
         * 5. Gather: go through the buckets sequentially and gather everything back into the original single input array.
+
+* Radix Sort
+    * Works by looking at individual digits in a set of numbers
+    * Starts either at the
+        * beginning of the number, the most significant digit (the digit in the largest place)
+        * end of the number, the least significant digit (the digit in the smalles place -- ex. the ones place)
+            * 1. sort values first based on one's place
+            * 2. then based on ten's place
+            * 3. so on and so forth until largest place, in this case hundred's and.. tada! it's all sorted :)
+    
