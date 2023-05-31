@@ -130,7 +130,7 @@
 * There is no perfect sort
     * Different sorts are good at different things
 
-### Basic Sorting Algorithms (Bubble & Insertion Sort)
+### Basic Comparison Sorting Algorithms (Bubble & Insertion Sort)
 
 * like the long division of basic sorts:
     * slow, inefficient, infrequently used
@@ -164,3 +164,25 @@
     * Big O Space Complexity: 0(1)
         * again, you're not creating new space for the elements, you're using the existing space (sorting in place), so space remains constant
     * Big O Time Complexity: 0(N^2)
+
+### Distribution Sorting Algorithms (Bucket & Radix Sort)
+
+* Types
+    * Bucket Sort
+        * sorts elements into buckets based on their value, and then uses ANOTHER method to sort the elements within those buckets
+        * can be used for integers or strings
+    * Radix Sort
+        * same as bucket sort but works ONLY for integers
+
+* How Many Buckets?
+    * Depends on your data set
+        * ex. sorting a LOT of elements alphabetically
+            * could do 1 per letter => 26 buckets
+        * ex. sorting numbers with radix sort
+            * could do 1 per digit => 10 buckets
+            * could do 1 per # of places in digit => X buckets (ex. max # is 3000, that would be 4 digits, so there would b 4 buckets)
+    * General rule of thumb
+        * use when theres no one obvious way to create your buckets
+        * use the square root of the # of items to sort
+            * ex. 100 items => 10 buckets
+    
