@@ -213,3 +213,61 @@
 
 ### Divide-and-Conquer Sorting Algorithms (Merge and Quick Sort)
 
+* These algorithms use recursion
+
+* Merge Sort
+    * How It Works
+        * splits the input array in half over and over again until only individual elements remain
+        * Then sorts these elements (2 at a time) into smaller sorted arrays
+        * Then merge small sorted pieces back into larger arrays, sorting them along the way
+        * Repeat until you end up with 1 sorted array!
+        * Since arrays are sorted, you only need to the compare the FIRST elements (since the elements behind curr element of curr array are always in order)
+
+    * Components
+        * Made up of 2 algorithms, each of which are used in diff phases
+            * merge sort algorithm
+            * merge algorithm
+        * Phase 1: Divide
+            * split the array until you cant anymore
+            * uses merge sort algo
+            * this is the phase that uses recursion
+        * Phase 2: Merge
+            * merge split pieces back together
+            * uses merge algo (sometimes called merge helper function)
+            * is NOT recursive
+
+    * Divide: The Recursive Merge Sort Algorithm
+        * Base case: the array is one element or shorter
+            * Action: return the array bc you are done :)
+        * Recursive case: the array is longer than one element
+            * Action:
+                * Divide the array into two pieces.
+                * Call itself again on BOTH the left and right sides you just created (TWO recursive calls)
+        * Doesn't check to see if final single-item arrays are sorted, bc it relies on the fact that single-item arrays are fundamentally sorted, and returns them
+
+    * Conquer: The Merge Algorithm aka Merge Helpher Function
+        * remember, this algo is DIFFERENT from the merge sort algo
+        * is NOT recursive
+        * How It Works
+            * Takes two sorted* arrays, compares them, and SORTS them into a single results list
+            * Starts with the sorted single-element arrays create by merge sort algo
+            * Process:
+                * 1. Start at the beginning of two arrays of items
+                * 2. Compare the first item from each array to each other
+                * 3. Whichever value is less, copy it to a results list
+                * 4. Move on to the next item in the array that just gave its first element to the results list
+                5. Repeat Steps 1-4 until you have all of the elements from both arrays in the results list.
+    * Merge Sort's Time Complexity
+        * non recursive merge algo: 0(N)
+            * is linear bc as input increases, so does the amount of times you need to compare and merge back
+            * more elements = more little branches to merge back into one big branch
+        * recursive merge-sort algo: 0(log(N))
+            * very good
+        * overall complexity: multiply the two
+            * 0(N log(N))
+    * Merge Sort's Space Complexity
+        * creates a separate "results" array as the data is being merged
+        * therefore, is an out-of-place sort
+        * uses 0(N) space complexity
+
+* Quick Sort
