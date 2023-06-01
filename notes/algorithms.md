@@ -210,4 +210,6 @@
             * 1. sort values first based on one's place
             * 2. then based on ten's place
             * 3. so on and so forth until largest place, in this case hundred's and.. tada! it's all sorted :)
-    
+
+### Divide-and-Conquer Sorting Algorithms (Merge and Quick Sort)
+
