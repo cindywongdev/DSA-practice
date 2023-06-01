@@ -280,4 +280,5 @@
         * now recursively call quick sort on the partitioned array on either side of the pivot in order to sort those elements
     * Process
         * convention: use either first or last value in the array as the pivot
-        
+        * (Interactive Demo)[http://me.dt.in.th/page/Quicksort/] (v helpful!)
+
