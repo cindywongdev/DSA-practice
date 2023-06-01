@@ -271,3 +271,13 @@
         * uses 0(N) space complexity
 
 * Quick Sort
+    * differs from merge sort in how it approaches the divide phase
+    * divides an array into THREE parts
+        * the pivot (a single element)
+        * the left partition, an array containing numbers lower than the pivot
+        * the right partition, an array containing numbers higher than the pivot
+    * after this division, the pivot is considered sorted, since it's a single element
+        * now recursively call quick sort on the partitioned array on either side of the pivot in order to sort those elements
+    * Process
+        * convention: use either first or last value in the array as the pivot
+        
