@@ -281,3 +281,26 @@
     * Process
         * convention: use either first or last value in the array as the pivot
         * (Interactive Demo)[http://me.dt.in.th/page/Quicksort/] (v helpful!)
+
+    * Quick Sort's Time Complexity
+        * O(N^2)
+        * bc partitioning slows it down
+        * worst case scenario: an almost sorted array with one element out of place, either at end or beginning
+            * and you start with pivot at the out of place element
+        * So why use quick sort at all? Why not just use merge sort?
+            * Bc both merge and quick sort have SAME average runtime of Θ(N log(N))
+            * so most of the time, both r great
+    * Quick Sort's Space Complexity
+        * O(log(N))
+        * this makes it usually faster than merge sort in practice, bc it takes less extra space :)
+
+* Quick Sort vs. Merge Sort (their benefits & uses)
+    * On a V dense data set (has a lot of similar values), merge sort will def win!
+
+    | Quick Sort | Merge Sort |
+    |------------|------------|
+    |  Better in a virtual memory environment       |           Useful in database scenarios|
+    | Built-in sort function in C programming languages, Java, and Python | Useful when additional data may arrive during or after sorting |
+    | Works better for caching environments | Used by Safari and Firefox in their implementations of Javascript's .sort function |
+
+    
