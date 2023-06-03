@@ -303,4 +303,40 @@
     | Built-in sort function in C programming languages, Java, and Python | Useful when additional data may arrive during or after sorting |
     | Works better for caching environments | Used by Safari and Firefox in their implementations of Javascript's .sort function |
 
-    
+### Search Algorithms (Brute Force & Binary Search)
+
+* Brute Force Approach
+    * refers to an algorithm that tries every possibility available
+    * ex. looping through every item in an array to find a specific item
+    * this is the method used by JS methods such as
+        * .indexOf
+        * .findIndex
+        * .find
+    * Time Complexity: 0(N)
+
+* Binary search
+    * What if the array was ALREADY sorted? (ex. a dictionary)
+        * no need for brute force approach anymore
+        * We can implement binary search :)
+    * Basic Process
+        * Given:
+            * a sorted array
+            * a search value
+        * Find the middle element in the array
+            * If the array has an even # of elements, take the one just left of center
+        * Is this middle element the one we are searching for?
+            * If so, great! We are done :)
+        * If not, go down 1 of 2 paths:
+            * If our search value comes BEFORE this middle element
+                * Search the subsection of the array from index 0 to the element right before the middle element (we know it has to be in there somewhere)
+            * If our search value comes AFTER this middle element,
+                * Search the subsection of the array from the element right after the middle element to the end of the array
+        * Finishing the Search
+            * If we're down to a one-element array subection that element isn't the one we want, we know the element isn't in the array
+            * If, after halving, we get to an array of size 0, we know the element isn't in the array
+    * Time Complexity: 0(log(N))
+        * bc it cuts the problem in half and repeats as needed
+    * If not found...
+        * binary search returns a negative number
+        * BUT, that number tells you where you would INSERT the element into the array
+            * index to insert = | neg number | - 1
