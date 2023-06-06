@@ -26,3 +26,19 @@
         * But, there are some questions it cant immediately answer without writing extra code, such as:
             * did any two days have the same average temperature?
             * which temp appears the most
+* The Types of Data Structures
+    * Linked Lists: lists that store data inside of nodes that point to each other
+    * Stacks: lists of order values in which the first item in is the last item out
+        * FILO
+        * like a stack of plates
+    * Queues: lists of ordered values in which the first item in is the first item out
+        * FIFO
+        * like a queue of people
+    * Hash Tables: list-like structures that use a hash function to generate keys for values
+    * Sets: similar to an array, but can only contain UNIQUE values
+    * Binary Trees: Node-based structures that store values using left and right pointers
+    * Trees: Tree structures in whihc nodes can store lists of child nodes
+        * almost always used for strings 
+    * AVL Trees: a binary tree that's balanced
+        * each side of the tree is a similar height, which means its balanced
+    * Graphs: collections of nodes and edges in which nodes store data and edges represent connections between data
