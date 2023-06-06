@@ -42,3 +42,23 @@
     * AVL Trees: a binary tree that's balanced
         * each side of the tree is a similar height, which means its balanced
     * Graphs: collections of nodes and edges in which nodes store data and edges represent connections between data
+
+### Linked Lists
+* a foundational data structure that is used by many complex data structures
+* key component: a node
+    * in a linked list specifically, a node is a unit containing 2 things at the same time
+        * a **data** property that stores a value
+        * a **next** property, sometimes called a "pointer", that points to the next item in the list
+    * the only exception to this rule in a linked list is the last item, which doesn't need a pointer
+        * this last item is known as a "null next node" or "the tail"
+* Linked List vs Array
+    * An array needs a continous block of memory to store its elements, so it is difficult to expand
+    * But a linked list can use pointers to point to different memory addresses, allowing it to expand without limitations
+* Pros and Cons of Linked Lists
+    * Pros: can keep growing and adding nodes
+    * Cons:
+        * Take up more space than arrays
+            * because you have to store both the data AND pointers
+        * Can take more time to access a linked list bc the data isn't read as one continous chunk (you have to travel to all memory addresses)
+        * Can't access a particular node in linked list without starting from the top and moving sequentially until you find it
+            * wheres in an array, you can quickly find a value based on its index
