@@ -62,3 +62,47 @@
         * Can take more time to access a linked list bc the data isn't read as one continous chunk (you have to travel to all memory addresses)
         * Can't access a particular node in linked list without starting from the top and moving sequentially until you find it
             * wheres in an array, you can quickly find a value based on its index
+* Efficiency of Linked Lists
+    * basic functions to perform on data structures
+        * access
+        * search
+        * insertion
+        * deletion
+    * efficiency of a data structure = how long it takes to perform these basic functions on them
+
+    | Data Stucture | Access | Search | Insertion | Deletion |
+    |---------------|--------|--------|-----------|----------|
+    |     Array     | 0(1)   | 0(N)   | 0(N)      | 0(N)     |
+    | Linked List   | 0(N)   | 0(N)   | 0(1)      | 0(1)     |
+
+    * Access
+        * Arrays are 0(1) bc we can use the index to find the nth element
+        * but linked lists dont have indexing so we'd have to count from the beginning all the way up to nth element, which in the worst case would be through the entire array of size N
+    * Search
+        * search is 0(N) for both bc we'd have to go through each element to find the element we are looking for
+    * Insertion
+        * Head: name of first node, default pointer is null when there's only 1 element
+        * default (and easiet) place to add a new node is at the end of a linked list
+        * find last node by looking for the node with **null** as its **next** value
+            * then, we can change that node's **next** property to the new node we're inserting into the list
+* Traversing a Linked List
+    * In order to access, search, or manipulate a linked list, we first need to write code that traverses the list
+    * Traversing has to start at the __head__ and then use the __next__ pointers to iterature through the list:
+        ```
+            let walker = this.head
+            while (walker.next){
+                walker = walker.next
+            }
+        ```
+        * the variable walker is dynamically reassigned each next value of the linked list as it traverses it
+    * To search or access a specific point in the list, we could write a conditional inside the loop
+* The Importance of Next Pointers
+    * When inserting or deleting a node, you're basically manipulating pointers
+    * Danger when inserting/deleting in middle of list: accidentally breaking a pointer (a pointer loses reference to the rest of the list), making it impossible to reference the rest of the list
+* Singly vs Doubly Linked List
+    * Double Linked List: same as single, but also points in reverse direction
+        * allows us to traverse a list backwards
+        * in addition to  __data__ and __next__ properties in a double linked list's nodes, they also have
+            * a __previous__ property that points to the previous item in the list
+        * Pro: gives you more mobility than a singly linked list
+        * Con: much more complicated to manipulate -- you have to manage both next and previous pointers
