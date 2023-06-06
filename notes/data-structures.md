@@ -106,3 +106,13 @@
             * a __previous__ property that points to the previous item in the list
         * Pro: gives you more mobility than a singly linked list
         * Con: much more complicated to manipulate -- you have to manage both next and previous pointers
+* Uses for Linked Lists
+    * uncommon to be used by itself
+        * usually used as basis for other data structures such as stacks and queues
+    * A playlist of songs = a doubly linked list
+        * bc each song points to both the previous and next songs
+    * An image viewer/carousel
+        * images are linked to both the previous and next images
+    * Some file systems
+        * files are usually stored in chunks with a determined size
+        * but when files get too larger, the chunks of the original file link to the next section of a file that's stored in another node
