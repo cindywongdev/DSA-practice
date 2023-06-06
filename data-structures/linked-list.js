@@ -1,3 +1,5 @@
+// source: https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/
+
 // code structure of a linked list
 // ListNode {
 //     data: 2,
