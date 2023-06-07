@@ -17,14 +17,12 @@ class LinkedList{
     getLast(){
         // traverse list
         let node = this.head
-
         while (node) {
             if (node.next){
                 node = node.next
             }
             break
         }
-
         return node
     }
     
@@ -35,7 +33,7 @@ class LinkedList{
         // get last node
         const lastNode = this.getLast()
         console.log("last node:", lastNode)
-        
+
         // if lastNode is null, that means this newNode will be the head
         if (!lastNode){
             this.head = newNode
@@ -45,9 +43,31 @@ class LinkedList{
         }
     }
   
-    // prependNode(data){
-    //     // creates a new node with the given data and adds it to the front of the list
-    // }
+    prependNode(data){
+        // creates a new node with the given data and adds it to the front of the list
+        
+        // create new node
+        const newNode = new Node(data)
+
+        // if head exists
+        if (this.head){
+            // grab head
+            const head = this.head
+            console.log("head:", head)
+
+            // reference head as new node's link
+            newNode.next = head
+            // set newNode as head property (necessary!)
+            this.head = newNode
+
+            console.log("newNode: ", newNode)
+        } else {
+            // what if no head?
+            // set newNode as head
+            this.head = newNode
+        }
+    }
+
     // pop(){
     //     // removes the last node from the list and returns it
     // }
@@ -77,6 +97,6 @@ class LinkedList{
 
 let list = new LinkedList();
 list.appendNode(1);
-console.log(list.head)
 list.appendNode(2)
-console.log(list)
+list.prependNode(27)
+console.log("list after all changes:", list)
