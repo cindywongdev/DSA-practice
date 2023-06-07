@@ -53,24 +53,20 @@ class LinkedList{
         if (this.head){
             // grab head
             const head = this.head
-            console.log("head:", head)
-
             // reference head as new node's link
             newNode.next = head
             // set newNode as head property (necessary!)
             this.head = newNode
-
-            console.log("newNode: ", newNode)
         } else {
-            // what if no head?
-            // set newNode as head
+            // if no head, set newNode as head
             this.head = newNode
         }
     }
 
-    // pop(){
-    //     // removes the last node from the list and returns it
-    // }
+    pop(){
+        // removes the last node from the list and returns it
+        
+    }
     // removeFromFront(){
     //     // remove the head node from the list and return it
     //     // the next node in the list is the new head node
