@@ -19,7 +19,10 @@ class LinkedList{
         let node = this.head
 
         while (node) {
-            node = node.next
+            if (node.next){
+                node = node.next
+            }
+            break
         }
 
         return node
@@ -32,6 +35,7 @@ class LinkedList{
         // get last node
         const lastNode = this.getLast()
         console.log("last node:", lastNode)
+        
         // if lastNode is null, that means this newNode will be the head
         if (!lastNode){
             this.head = newNode
@@ -41,35 +45,38 @@ class LinkedList{
         }
     }
   
-    prependNode(data){
-        // creates a new node with the given data and adds it to the front of the list
-    }
-    pop(){
-        // removes the last node from the list and returns it
-    }
-    removeFromFront(){
-        // remove the head node from the list and return it
-        // the next node in the list is the new head node
-    }
-    insertAt(X, data){
-        // insert a new node into the list with the given data
-        // place it after X nodes in the list
-        // if X exceeds the bounds of the list, put the node at the end
-        // insertAt(0, 7) would add the new node as the head
-    }
-    removeAt(X){
-        // remove the Xth node from the list, considering 0 to be the first node
-        // return the node that has been removed
-    }
-    search(data){
-        // searches the list for a node with the given data
-        // if it is found, return the "index" of the node, considering 0 to be the first node
-        // if not, return false
-    }
-    sort(){
-        // sort the Linked List in ascending order of data values
-    }
+    // prependNode(data){
+    //     // creates a new node with the given data and adds it to the front of the list
+    // }
+    // pop(){
+    //     // removes the last node from the list and returns it
+    // }
+    // removeFromFront(){
+    //     // remove the head node from the list and return it
+    //     // the next node in the list is the new head node
+    // }
+    // insertAt(X, data){
+    //     // insert a new node into the list with the given data
+    //     // place it after X nodes in the list
+    //     // if X exceeds the bounds of the list, put the node at the end
+    //     // insertAt(0, 7) would add the new node as the head
+    // }
+    // removeAt(X){
+    //     // remove the Xth node from the list, considering 0 to be the first node
+    //     // return the node that has been removed
+    // }
+    // search(data){
+    //     // searches the list for a node with the given data
+    //     // if it is found, return the "index" of the node, considering 0 to be the first node
+    //     // if not, return false
+    // }
+    // sort(){
+    //     // sort the Linked List in ascending order of data values
+    // }
 }
 
 let list = new LinkedList();
 list.appendNode(1);
+console.log(list.head)
+list.appendNode(2)
+console.log(list)
