@@ -12,16 +12,27 @@ class LinkedList{
         // a Linked List starts with a "head" property intialized as null
         this.head = null
     }
+
+    // function to get length of list
+    getCount(){
+        // traverse list
+        let node = this.head
+        let count = 0
+        while (node){
+            node = node.next
+            count += 1
+        }
+        return count
+    }
   
     // function to get the last node
     getLast(){
         // traverse list
         let node = this.head
-        while (node) {
-            if (node.next){
-                node = node.next
-            }
-            break
+        // while node exists AND node.next exists (we first need to know if node exists, otherwise trying to access node.next will throw an error if it doesnt)
+        // if it does, if node.next exists (there is a next node to traverse to, reassign node to the next node)
+        while (node && node.next) {
+            node = node.next
         }
         return node
     }
@@ -32,7 +43,6 @@ class LinkedList{
         const newNode = new Node(data)
         // get last node
         const lastNode = this.getLast()
-        console.log("last node:", lastNode)
 
         // if lastNode is null, that means this newNode will be the head
         if (!lastNode){
@@ -65,27 +75,60 @@ class LinkedList{
 
     pop(){
         // removes the last node from the list and returns it
-        
+        // // first, grab the last node
+        // const lastNode = this.getLast()
+        // console.log("pop lastNode:", lastNode)
+
+        // check how many nodes are in list
+        const numNodes = this.getCount()
+
+        let poppedNode = null
+
+        if (numNodes === 0){
+            console.log('nothing to pop')
+        } else if (numNodes === 1){
+            // if last node is the only node, great
+            poppedNode = this.head
+            // now remove it
+            this.head = null
+        } else if (numNodes >= 2){
+            // else, grab second to last node
+            // traverse list
+            let penultimateNode = this.head
+            while (penultimateNode.next.next != null){
+                penultimateNode = penultimateNode.next
+            }
+            // set poppedNode to last node
+            poppedNode = penultimateNode.next
+            // remove last node
+            penultimateNode.next = null
+        }
+        return poppedNode
     }
+
     // removeFromFront(){
     //     // remove the head node from the list and return it
     //     // the next node in the list is the new head node
     // }
+
     // insertAt(X, data){
     //     // insert a new node into the list with the given data
     //     // place it after X nodes in the list
     //     // if X exceeds the bounds of the list, put the node at the end
     //     // insertAt(0, 7) would add the new node as the head
     // }
+
     // removeAt(X){
     //     // remove the Xth node from the list, considering 0 to be the first node
     //     // return the node that has been removed
     // }
+
     // search(data){
     //     // searches the list for a node with the given data
     //     // if it is found, return the "index" of the node, considering 0 to be the first node
     //     // if not, return false
     // }
+
     // sort(){
     //     // sort the Linked List in ascending order of data values
     // }
@@ -93,6 +136,12 @@ class LinkedList{
 
 let list = new LinkedList();
 list.appendNode(1);
-list.appendNode(2)
+list.appendNode(2);
+list.appendNode(3);
+list.appendNode(42);
 list.prependNode(27)
+console.log(list.pop()) // 42
+
+
+console.log("count:", list.getCount())
 console.log("list after all changes:", list)
