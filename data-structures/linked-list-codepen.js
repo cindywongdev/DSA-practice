@@ -181,11 +181,27 @@ class LinkedList{
         return removedNode
     }
 
-    // search(data){
-    //     // searches the list for a node with the given data
-    //     // if it is found, return the "index" of the node, considering 0 to be the first node
-    //     // if not, return false
-    // }
+    search(data){
+        // searches the list for a node with the given data
+        // if it is found, return the "index" of the node, considering 0 to be the first node
+        let currentIndex = 0
+        let foundIndex = null
+
+        // traverse list
+        let currentNode = this.head
+        console.log("currentNode:", currentNode.data, data)
+        while (currentNode){
+            if (currentNode.data === data){
+                foundIndex = currentIndex
+            }
+            currentIndex += 1
+            currentNode = currentNode.next
+        }
+
+
+        // if not, return false
+        return foundIndex === null ? false : foundIndex
+    }
 
     // sort(){
     //     // sort the Linked List in ascending order of data values
@@ -213,13 +229,9 @@ let list = new LinkedList();
 list.appendNode(1);
 list.appendNode(2);
 list.appendNode(3);
-let removedNode = list.removeAt(1);
-console.log(list.head.next.data) // => 3
-console.log(list.head.data) // => 1
-console.log(removedNode.data) // => 2
-let secondRemovedNode = list.removeAt(0);
-console.log(secondRemovedNode.data) // => 1
-console.log(list.head.data) // => 3
+console.log(list.search(3))
+console.log(list.search(2))
+console.log(list.search(42))
 
 
-console.log("list after all changes:", list)
+// console.log("list after all changes:", list)
