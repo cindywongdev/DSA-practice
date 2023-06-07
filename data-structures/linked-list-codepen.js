@@ -130,7 +130,7 @@ class LinkedList{
         const newNode = new Node(data)
         // initialize var to traverse later to get to insert position
         let placeAfterThisNode = this.head
-        
+
         // if X <= 0, place new node at beginning
         if (X <= 0){
             const currHead = this.head // save current head into var
@@ -153,10 +153,33 @@ class LinkedList{
         }
     }
 
-    // removeAt(X){
-    //     // remove the Xth node from the list, considering 0 to be the first node
-    //     // return the node that has been removed
-    // }
+    removeAt(X){
+        // remove the Xth node from the list, considering 0 to be the first node
+        // return the node that has been removed
+
+        let removedNode = null
+
+        if (X === 0){
+            removedNode = this.removeFromFront()
+        } else {
+            let prevNode = this.head
+            // traverse list to get to prev node
+            for (let i=0; i<X-1; i+=1){
+                prevNode = prevNode.next
+            }
+
+            // get nodeToRemove and afterNode using prevNode
+            const nodeToRemove = prevNode.next
+            const afterNode = nodeToRemove.next
+
+            // connect the previous node to the node after
+            prevNode.next = afterNode
+
+            removedNode = nodeToRemove
+        }
+
+        return removedNode
+    }
 
     // search(data){
     //     // searches the list for a node with the given data
@@ -169,19 +192,34 @@ class LinkedList{
     // }
 }
 
+// let list = new LinkedList();
+// list.appendNode(1);
+// list.appendNode(2);
+// list.appendNode(3);
+// list.appendNode(4);
+// // list.prependNode(27)
+// // console.log(list.pop()) // 42
+
+// // console.log("count:", list.getCount())
+// // console.log("removed from front:", list.removeFromFront())
+// // console.log("removed from front:", list.removeFromFront())
+// // console.log("removed from front:", list.removeFromFront())
+
+// // list.insertAt(2, 527)
+// list.removeAt(0)
+// list.removeAt(0)
+
 let list = new LinkedList();
 list.appendNode(1);
 list.appendNode(2);
 list.appendNode(3);
-list.appendNode(4);
-// list.prependNode(27)
-// console.log(list.pop()) // 42
+let removedNode = list.removeAt(1);
+console.log(list.head.next.data) // => 3
+console.log(list.head.data) // => 1
+console.log(removedNode.data) // => 2
+let secondRemovedNode = list.removeAt(0);
+console.log(secondRemovedNode.data) // => 1
+console.log(list.head.data) // => 3
 
-// console.log("count:", list.getCount())
-// console.log("removed from front:", list.removeFromFront())
-// console.log("removed from front:", list.removeFromFront())
-// console.log("removed from front:", list.removeFromFront())
 
-list.insertAt(2, 527)
-
-console.log("list after all changes:", list.head.next.next.next.next)
+console.log("list after all changes:", list)
