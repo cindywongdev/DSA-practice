@@ -106,10 +106,19 @@ class LinkedList{
         return poppedNode
     }
 
-    // removeFromFront(){
-    //     // remove the head node from the list and return it
-    //     // the next node in the list is the new head node
-    // }
+    removeFromFront(){
+        // remove the head node from the list and return it
+        // the next node in the list is the new head node
+
+        // grab head node
+        const removed = this.head
+
+        // set new head to 2nd node (i guess this automatically removed the first head's reference)
+        const newHead = this.head.next
+        this.head = newHead
+
+        return removed
+    }
 
     // insertAt(X, data){
     //     // insert a new node into the list with the given data
@@ -142,6 +151,10 @@ list.appendNode(42);
 list.prependNode(27)
 console.log(list.pop()) // 42
 
-
 console.log("count:", list.getCount())
+console.log("removed from front:", list.removeFromFront())
+console.log("removed from front:", list.removeFromFront())
+console.log("removed from front:", list.removeFromFront())
+
+
 console.log("list after all changes:", list)
