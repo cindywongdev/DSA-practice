@@ -120,12 +120,38 @@ class LinkedList{
         return removed
     }
 
-    // insertAt(X, data){
-    //     // insert a new node into the list with the given data
-    //     // place it after X nodes in the list
-    //     // if X exceeds the bounds of the list, put the node at the end
-    //     // insertAt(0, 7) would add the new node as the head
-    // }
+    insertAt(X, data){
+        // insert a new node into the list with the given data
+        // place it after X nodes in the list
+        // if X exceeds the bounds of the list, put the node at the end
+        // insertAt(0, 7) would add the new node as the head
+
+        // create new node
+        const newNode = new Node(data)
+        // initialize var to traverse later to get to insert position
+        let placeAfterThisNode = this.head
+        
+        // if X <= 0, place new node at beginning
+        if (X <= 0){
+            const currHead = this.head // save current head into var
+            this.head = newNode
+            newNode.next = currHead
+        // if X exceed bounds of list, place at end
+        } else if (X >= this.getCount()){
+            this.appendNode(data)
+        } else {
+            // traverse list to get to X position
+            for(let i=1; i<X; i+=1){
+                placeAfterThisNode = placeAfterThisNode.next
+            }
+            // save the ref of placeAfterThisNode before replacing it
+            const restOfList = placeAfterThisNode.next
+            // replace ref to new Node
+            placeAfterThisNode.next = newNode
+            // add rest of list back to new node
+            newNode.next = restOfList
+        }
+    }
 
     // removeAt(X){
     //     // remove the Xth node from the list, considering 0 to be the first node
@@ -147,14 +173,15 @@ let list = new LinkedList();
 list.appendNode(1);
 list.appendNode(2);
 list.appendNode(3);
-list.appendNode(42);
-list.prependNode(27)
-console.log(list.pop()) // 42
+list.appendNode(4);
+// list.prependNode(27)
+// console.log(list.pop()) // 42
 
-console.log("count:", list.getCount())
-console.log("removed from front:", list.removeFromFront())
-console.log("removed from front:", list.removeFromFront())
-console.log("removed from front:", list.removeFromFront())
+// console.log("count:", list.getCount())
+// console.log("removed from front:", list.removeFromFront())
+// console.log("removed from front:", list.removeFromFront())
+// console.log("removed from front:", list.removeFromFront())
 
+list.insertAt(2, 527)
 
-console.log("list after all changes:", list)
+console.log("list after all changes:", list.head.next.next.next.next)
