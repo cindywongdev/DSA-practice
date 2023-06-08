@@ -198,14 +198,14 @@ class LinkedList{
             currentNode = currentNode.next
         }
 
-
         // if not, return false
         return foundIndex === null ? false : foundIndex
     }
 
-    // sort(){
-    //     // sort the Linked List in ascending order of data values
-    // }
+    sort(){
+        // sort the Linked List in ascending order of data values
+        
+    }
 }
 
 // let list = new LinkedList();
