@@ -204,7 +204,7 @@ class LinkedList{
 
     sort(){
         // sort the Linked List in ascending order of data values
-        
+
     }
 }
 
@@ -222,7 +222,6 @@ class LinkedList{
 // // console.log("removed from front:", list.removeFromFront())
 
 // // list.insertAt(2, 527)
-// list.removeAt(0)
 // list.removeAt(0)
 
 let list = new LinkedList();
