@@ -223,7 +223,6 @@ class LinkedList{
 
 // // list.insertAt(2, 527)
 // list.removeAt(0)
-// list.removeAt(0)
 
 let list = new LinkedList();
 list.appendNode(1);
