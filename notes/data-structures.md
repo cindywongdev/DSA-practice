@@ -157,4 +157,7 @@
         * and how you expect to be inserting or removing elements
     * Stacks
         * Linked List Implementation: check files
-        
+        * Array Implementation: check files
+    * Queues
+        * Linked List Implementation: check files
+        * Array Implementation: check files
