@@ -30,7 +30,7 @@ class Stack {
     }
 
     peek(){
-        // this.head.data contains the entire linked list stack
+        // returns data at top of stack
         return this.head.data
     }
 
