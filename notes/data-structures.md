@@ -116,3 +116,5 @@
     * Some file systems
         * files are usually stored in chunks with a determined size
         * but when files get too larger, the chunks of the original file link to the next section of a file that's stored in another node
+
+### Stacks and Queues
