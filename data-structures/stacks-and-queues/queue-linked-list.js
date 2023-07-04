@@ -43,6 +43,9 @@ class Queue {
     }
 
     // rest is same as stack too
+    // *** code is same, but this.head represents diff things in stack vs. queue
+        // in stack, head is TOP of stack, aka LAST item added
+        // in queue, head is BEGINNING of queue, aka FIRST item added
     peek(){
         return this.head.data
     }
