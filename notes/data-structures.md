@@ -118,3 +118,43 @@
         * but when files get too larger, the chunks of the original file link to the next section of a file that's stored in another node
 
 ### Stacks and Queues
+
+* Behavior
+    * Stacks: last in, first out (LIFO)
+        * last item added is first item removed
+    * Queues: first in, first out (FIFO)
+        * first item added is first item removed
+        * items are removed in the order they were added
+* Examples in Programming
+    * Stack:
+        * back button, undo, cmd-Z
+            * pulls from the most recent action
+        * **the function call stack**
+            * when you call a function to execute, it is pushed to the top of the stack
+            * it runs until we add another function to the stack, which then runs until it returns (or another function is pushed to the top)
+            * you can keep adding functions until you run out of space in the stack, aka you've reached stack overflow :o
+    * Queues:
+        * sending documents to printer
+            * printer prints them in the order they were sent (FIFO)
+        * computer processing unit (CPU) scheduling
+            * tasks are executed in the order they were called (ex. first clicking new tab and then typing url in)
+            * tasks further down the queue are put on hold until resources are available
+* Stack & Queue Actions
+    * the same relatively limited set of actions can be performed on both stacks and queues
+    * tradeoff: limited functionality = GREAT RUNTIMES!!! 0(1)!!!
+
+    | Function | Name in a Stack | Name in a Queue | Complexity |
+    |----------|-----------------|-----------------|------------|
+    | Access   | Peek            | Peek            | 0(1)       |
+    | Insert   | Push            | Enqueue         | 0(1)       |
+    | Delete   | Pop             | Dequeue         | 0(1)       |
+    | Check empty | isEmpty      | isEmpty         | 0(1)       |
+
+* Implementations
+    * both stacks and queues can be implemented as arrays or linked lists
+    * either way, theres no major diff between which data structure you choose to implement with
+        * choose depending on how your data is already structured
+        * and how you expect to be inserting or removing elements
+    * Stacks
+        * Linked List Implementation: check files
+        
