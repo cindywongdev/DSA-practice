@@ -161,3 +161,22 @@
     * Queues
         * Linked List Implementation: check files
         * Array Implementation: check files
+
+* Variations on a Queue
+    * The Priority Queue
+        * in addition to regular queue rules:
+            * 1. every element has a priority associated with it
+            * 2. an element with a high priority is dequeued before an element with low priority
+            * 3. if two elements have same priority, they are served according to their order in the queue
+        * IRL: just like priority boarding for a plane
+        * Programming: CPU scheduling is commonly implmenented as a priority queue
+    * The Double-Ended Queue (Deque for short)
+        * performs insertions and deletions at BOTH ends
+            * rather than just insertions at end and deletion at front
+        * usually implemented with doubly linked list or dynamic array
+        * often used for task scheduling algorithms
+        * IRL: like when you're last in line at a grocery store but a new register opens up and you get to go first
+        * Programming: spreading tasks between diff servers
+            * each server has double ended queue
+            * moves thru it's queue as normal
+            * BUT, if a server finishes running thru its queue and has an empty one, it can take tasks from the END of another server's queue :) nice!!
