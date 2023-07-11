@@ -179,4 +179,4 @@
         * Programming: spreading tasks between diff servers
             * each server has double ended queue
             * moves thru it's queue as normal
-            * BUT, if a server finishes running thru its queue and has an empty one, it can take tasks from the END of another server's queue :) nice!!
+            * BUT, if a server finishes running thru its queue and has an empty one, it can take tasks from the END of another server's queue :) nice!
