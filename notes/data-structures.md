@@ -180,3 +180,15 @@
             * each server has double ended queue
             * moves thru it's queue as normal
             * BUT, if a server finishes running thru its queue and has an empty one, it can take tasks from the END of another server's queue :) nice!
+
+### Hash Tables
+
+* Hash Functions
+    * takes a recognizable input and modifies it (hashes it) to produce an outcome (that is not necessarily recognizable)
+        * like hashing a password
+* Collisions
+    * when two pieces of info are placed in the same memory address
+* Linear Hash
+    * like hashSimple, which is:
+        * basically a function that returns a memory address for each input
+    * but if it returns a memory address that is already taken, add 1 to index until you find an address that isn't occupied (if you reach the end, go back to index 0 and keep going)
