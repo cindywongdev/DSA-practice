@@ -192,3 +192,5 @@
     * like hashSimple, which is:
         * basically a function that returns a memory address for each input
     * but if it returns a memory address that is already taken, add 1 to index until you find an address that isn't occupied (if you reach the end, go back to index 0 and keep going)
+* Chaining
+    * if hash function returns a memory address that is already taken, just chain the input to the already occupied address (like building a 2nd floor on top of an occupied apartment)
