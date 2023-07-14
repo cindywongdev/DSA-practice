@@ -191,11 +191,14 @@
         * basically, maps a key from the large pool of possible keys to a much smaller rang of possible indices in a hash table (so that info will be much quicker to find)
 * Collisions
     * when two pieces of info are placed in the same memory address
-* Linear Hash
+* Linear Hash/Linear Probing
+    * resolves collisions
     * like hashSimple, which is:
         * basically a function that returns a memory address for each input
     * but if it returns a memory address that is already taken, add 1 to index until you find an address that isn't occupied (if you reach the end, go back to index 0 and keep going)
 * Chaining
+    * resolves collisions
     * if hash function returns a memory address that is already taken, just chain the input to the already occupied address (like building a 2nd floor on top of an occupied apartment)
+    * each slot of the hash table can containe what is considered a "bucket", which can hold multiple records
 
 * Quick Generation -- it's important that an address in memory or index in an array can be calculated quickly
