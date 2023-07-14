@@ -203,3 +203,4 @@
     * buckets themselves are data strctures where you can put as many keys/records as you like
 
 * Quick Generation -- it's important that an address in memory or index in an array can be calculated quickly
+* Hash Table: a data structure that uses a key to sort an index into a table
