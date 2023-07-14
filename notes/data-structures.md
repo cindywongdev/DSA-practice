@@ -186,6 +186,9 @@
 * Hash Functions
     * takes a recognizable input and modifies it (hashes it) to produce an outcome (that is not necessarily recognizable)
         * like hashing a password
+    * takes a key (ex. string, int) for a data record (usually a key-value pair)
+        * returns an integer memory address or index in a table where that record can be stored
+        * basically, maps a key from the large pool of possible keys to a much smaller rang of possible indices in a hash table (so that info will be much quicker to find)
 * Collisions
     * when two pieces of info are placed in the same memory address
 * Linear Hash
@@ -195,4 +198,4 @@
 * Chaining
     * if hash function returns a memory address that is already taken, just chain the input to the already occupied address (like building a 2nd floor on top of an occupied apartment)
 
-* Quick Generation -- it's important that an address in memory of index in an array can be calculated quickly
+* Quick Generation -- it's important that an address in memory or index in an array can be calculated quickly
