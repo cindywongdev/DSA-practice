@@ -200,5 +200,6 @@
     * resolves collisions
     * if hash function returns a memory address that is already taken, just chain the input to the already occupied address (like building a 2nd floor on top of an occupied apartment)
     * each slot of the hash table can containe what is considered a "bucket", which can hold multiple records
+    * buckets themselves are data strctures where you can put as many keys/records as you like
 
 * Quick Generation -- it's important that an address in memory or index in an array can be calculated quickly
