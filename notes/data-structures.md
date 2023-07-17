@@ -204,3 +204,7 @@
 
 * Quick Generation -- it's important that an address in memory or index in an array can be calculated quickly
 * Hash Table: a data structure that uses a key to sort an index into a table!
+
+### Hash Tables (Deep Dive)
+
+*Hashing
