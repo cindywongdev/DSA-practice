@@ -314,3 +314,8 @@
         * if function returns a key that is in the hash table, it's spelled correctly
         * otherwise, it's mispelled
 
+* Time Complexity
+    * for search and insertion in a hash table
+    * worst-case = 0(N)
+        * would have to go thru every index or every element in a bucket to find a value, or to find an open space to insert a value
+    * well written hash function can be 0(1)
