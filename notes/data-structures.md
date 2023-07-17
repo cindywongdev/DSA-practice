@@ -295,3 +295,5 @@
     | Search | hash the key, see if it's at that index, and probe until you find it or find an empty slot (?) | hash the key, then search the data structure at that index for that key |
     | Insert | hash the key, then put it at the generated index; if that index is taken, probe until you find an available one | hash the key, then store it in the data structure at that index |
     | Remove | do a search, then a deletion. BUT you must set an indicator that an element was deleted or a probe might stop there when it should keep jumping (?) | hash a key, then delete the data from the data structure located at that index |
+
+* Direct Access Tables (Do Not Use)
