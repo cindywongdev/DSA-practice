@@ -297,3 +297,9 @@
     | Remove | do a search, then a deletion. BUT you must set an indicator that an element was deleted or a probe might stop there when it should keep jumping (?) | hash a key, then delete the data from the data structure located at that index |
 
 * Direct Access Tables (Do Not Use)
+    * a data structure that has the capability of mapping records to their corresponding keys using arrays
+    * records are placed using their key values directly as indexed (e.g. a phone number as a key would be in index 3475834582)
+        * but this array would have have a size of 10 billion
+    * so they are time efficient but NOT space efficient
+        * time efficient bc you know the exact slot where any value is stored
+        * not space efficient bc of the ridiculous size
