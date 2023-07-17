@@ -267,3 +267,31 @@
                     * never returns 0
                     * can return all addresses in the table
                 * if slot at hashed index is occupied, hash that returned index using the secondary hash function
+                * if that slot is ALSO occupied, multiply the index returned by second hash by 2, then 3, and so on.
+
+    * Closed Addressing
+        * aka chaining
+        * each slot in hash table is built as a bucket that can hold as many keys as you want
+            * so if hash function generates same index for 2 keys, no need to find another index -- just add them to the bucket
+            * these buckets are usually implemented as a linked list
+        * Pros & Cons
+            * Pros
+                * is a more elegant and simple approach to a hash table implementation
+                * much simpler insertion and deletion
+                * you can always add more data (no limit on space)
+            * Cons
+                * extra data structures require more memory and processing
+                * some slots in table may never get used
+                * a bad hash function might create v long chains, which decreases efficiency
+
+* Chaining vs. Probing
+    * any hash table implementation must include 3 basic methods:
+        * search
+        * insert
+        * remove
+
+    | Method | How Probing Does It | How Chaining Does It |
+    |--------|---------------------|----------------------|
+    | Search | hash the key, see if it's at that index, and probe until you find it or find an empty slot (?) | hash the key, then search the data structure at that index for that key |
+    | Insert | hash the key, then put it at the generated index; if that index is taken, probe until you find an available one | hash the key, then store it in the data structure at that index |
+    | Remove | do a search, then a deletion. BUT you must set an indicator that an element was deleted or a probe might stop there when it should keep jumping (?) | hash a key, then delete the data from the data structure located at that index |
