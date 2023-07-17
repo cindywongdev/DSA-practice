@@ -207,4 +207,18 @@
 
 ### Hash Tables (Deep Dive)
 
-*Hashing
+* Definitions
+    * Hashing
+        * appears in diff contexts
+        * depending on context, has slightly diff definitions
+        * most basic def:
+            * take key (i.e. piece of data)
+            * scramble it w/ an algorithm
+            * return an index, which is used to sort the key into a hash table
+    * Hash Function
+        * the algorithm that scrambles keys in order to produce indices
+        * only ONE RULE: for the SAME INPUT, the function should always return the SAME OUTPUT
+            * rest is guidelines for hash function:
+                * should be simple and efficient
+                * should distribute values evenly throughout hash table
+                * should avoid collisions
