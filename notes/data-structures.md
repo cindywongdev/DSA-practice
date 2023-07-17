@@ -303,3 +303,14 @@
     * so they are time efficient but NOT space efficient
         * time efficient bc you know the exact slot where any value is stored
         * not space efficient bc of the ridiculous size
+
+* Hash Tables in Use
+    * Good for: situations where you need to locate and retrieve a record in a collection of millions/billions of entries
+        * like accessing database records
+        * or locating items in a comps memory
+    * Example: a spellchecker
+        * after a user presses the space bar
+        * the word typed is pass through a hash function
+        * if function returns a key that is in the hash table, it's spelled correctly
+        * otherwise, it's mispelled
+
