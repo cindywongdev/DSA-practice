@@ -222,3 +222,43 @@
                 * should be simple and efficient
                 * should distribute values evenly throughout hash table
                 * should avoid collisions
+    * Hash Table
+        * a list like data structure
+        * designed to quickly store and retrieve key data records
+        * in order to be stored, keys must be mapped using a hash function to the set of possible indices in the table or to addresses of a memory location
+
+* Collisions
+    * they don't break the cardinal rule of a hash function, which is SAME INPUT = SAME OUTPUT
+    * in a collision's case, two DIFFERENT inputs produce the SAME output
+    * Methods of Resolution
+        * Open addressing (aka probing)
+        * Closed addressing (aka chaining)
+    
+    * Open Addressing
+        * basic concept: if the index generated for a key is already taken, jump to another place in the table to store your key
+        * 3 Most Common Types of Open Addressing
+            * 1. linear probing
+            * 2. quadratic probing
+            * 3. double hashing
+        * Pros & Cons of Open Addressing
+            * Pros
+                * If you are aware of limits on the type and number of keys, table can be optimized at the start
+                * Table can be completely filled up and space can be used more efficiently
+                * Does not require additional data structures
+            * Cons
+                * More complex computation
+                * Table can be completely filled up, preventing more values from being added in the future
+                * Address where a key ends up being inserted does not necessarily correspond to (and cannot necessarily be predicted by) its hash value
+                    * e.g. a function that calculates a memory address, and if it is alr occupied, keeps trying the NEXT address until it finds an open one
+                        * ^ so this output may depend on what address is open, and what the state of the table looks like
+                        * therefore, the same input can produce a diff final output
+        * Types of Open Addressing (Deep Dive)
+            * Linear Probing
+                * if the slot at the hashed index is occupied, look one slot to the right
+                * keep going until an open slot is found
+                * may cause clustering (if og hash function isn't set up carefully)
+                    * keys will be clumped together due to nature of this function (looking one to the right)
+                    * then, the function will have to iterate thru the entire cluster to reach an open space (vs. coming across open spaces scattered neatly throughout table)
+            * Quadratic Probing
+                * if slot at hashed index is occupied, square the number of steps you take to the right
+                    * i.e. take 1 step, then 4, 9, 16, 25, etc. until you find an open slot
