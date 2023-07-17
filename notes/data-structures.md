@@ -262,3 +262,8 @@
             * Quadratic Probing
                 * if slot at hashed index is occupied, square the number of steps you take to the right
                     * i.e. take 1 step, then 4, 9, 16, 25, etc. until you find an open slot
+            * Double Hashing
+                * create a secondary hash function, which:
+                    * never returns 0
+                    * can return all addresses in the table
+                * if slot at hashed index is occupied, hash that returned index using the secondary hash function
