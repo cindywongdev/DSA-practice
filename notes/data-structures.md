@@ -331,3 +331,14 @@
     * can store any type of data, even arrays or objects
     * how to get a set from a data set?
         * pass data set through a SET OBJECT ==> removes any duplicates (nice!)
+* Common Set Methods
+
+    | Method | Description |
+    |--------|-------------|
+    | .length | Returns the length of the set |
+    | .insert(value) | Adds a value to set, unless it's already present |
+    | .remove(value) | Removes and returns a value from the set |
+    | .has(value) | Returns true if that value is already in the set |
+    | .union(set) | Returns a new set comprising the union between the two previous sets (the set that invokes this method and the set passed as arg) (i.e. the combined values of both sets) |
+    | .intersect(set) | Returns a new set comprising the intersection between two previous sets (i.e. the values in both sets) |
+    | .difference(set) | Returns a new set comprising the difference between two sets (i.e. the valyes that only appeared in one of the two previous sets) |
