@@ -319,3 +319,15 @@
     * worst-case = 0(N)
         * would have to go thru every index or every element in a bucket to find a value, or to find an open space to insert a value
     * well written hash function can be 0(1)
+
+### Sets
+* Sets Basics
+    * sets are also list structures
+        * that hold sequences of UNIQUE values (unlike arrays, which can hold a sequence of any values)
+    * Practical uses IRL (useful for storing..)
+        * unique usernames in your database
+        * a unique list of tags on all your blog posts
+        * customer names
+    * can store any type of data, even arrays or objects
+    * how to get a set from a data set?
+        * pass data set through a SET OBJECT ==> removes any duplicates (nice!)
