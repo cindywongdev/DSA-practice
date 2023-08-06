@@ -405,3 +405,9 @@
         * a value
         * references to other nodes, usually stored in an array
     * tries almost always store ALPHABETICAL data
+        * value stores in a node is a single eltter
+        * references are pointers to other letters that make up a word
+
+    * Adding to a Trie
+        * first, check if element to be added is alr there
+        * then add it
