@@ -349,4 +349,52 @@
     * a collection of nodes (where data is stored) and edges (connections between nodes)
     * characteristics common across all tree species (such as binary trees and tries)
     * and make then a bit diff from other node-based data structures (like linked lists)
-        * 
+        * each tree has a root node - a unique start node.
+            * these usually are drawn as top of the tree
+        * each node in a tree can only have 1 parent node
+            * giving trees their hierarchical structure
+            * thus, there is only ever 1 path from a given node back to the root
+        * edges in a tree are sometimes called branches
+        * leaves are nodes at the end of a tree that have no child nodes
+        * a tree's height is equivalent to the length of the longest path from a leaf to the root
+* Trees in Action
+    * usually used in situations where data needs to be stored hierarchically
+    * tree data structures IRL:
+        * basic file storage (directory tree)
+        * comment trees: where users can comment on comments
+        * order of operations on calculator
+        * Document Object Model (DOM) tree (nodes)
+        * March Madness bracket (or any tournament w bracket system)
+* Binary Trees
+    * a species of tree with 1 defining feature: each nodes has AT MOST TWO branches
+    * each node (except root) has 3 properties:
+        * value: data in the node
+        * left: points to a node w a lesser value than current node
+        * right: points to a node w a greater value than current node
+    * if node has no child elements, left and right props can be null
+* Traversing a Binary Tree
+    * fancy term for checking every node in a tree structure
+        * ex. when you search for a node, insert a new one, or evaluate the size of a tree
+    * possible methods
+        * could use a while loop and a currentNode pointer, BUT this is not elegant code
+        * we want to traverse multiple paths --> RECURSION :)
+* Breadth-first vs Depth-first Search
+    * Breadth-first:
+        * searches all nodes at one level before moving onto next level
+        * tries to stay as close to root as possible
+    * Depth-first:
+        * searches a node and it's child nodes and those nodes child nodes and so forth, until it reaches a dead end (leaf)
+        * goes back to top and does it again
+        * tries to get as far away from root as possible, as quickly as possible
+    * Which is better?
+        * Depends on...
+            * the size and shape of your tree and
+            * the type of data you're looking for 
+        
+        | Breadth-first is better... | Depth-first is better... |
+        |----------------------------|--------------------------|
+        | If uk the val ur looking for is closer to the top | If uk the val ur looking for is closer to the bottom |
+        | If ur tree is vv deep | If ur tree is vv wide |
+        | When memory isn't a concern | When u needa be efficient w/ memory |
+        | When ur tryna find the shortest path from root node to another node | When ur tryna understand dependencies in the data |
+        | If u only wanna use iteration | If u wanna use recursion |
