@@ -402,3 +402,6 @@
     * nodes can store more than 2 child nodes, can store a LIST of child nodes
     * just like tree, starts w/ empty root node that points to child nodes
     * each child node contains 2 types of data:
+        * a value
+        * references to other nodes, usually stored in an array
+    * tries almost always store ALPHABETICAL data
