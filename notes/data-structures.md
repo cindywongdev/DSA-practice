@@ -398,3 +398,7 @@
         | When memory isn't a concern | When u needa be efficient w/ memory |
         | When ur tryna find the shortest path from root node to another node | When ur tryna understand dependencies in the data |
         | If u ONLY wanna use iteration | If u wanna use recursion |
+* Tries
+    * nodes can store more than 2 child nodes, can store a LIST of child nodes
+    * just like tree, starts w/ empty root node that points to child nodes
+    * each child node contains 2 types of data:
