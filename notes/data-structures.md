@@ -407,7 +407,15 @@
     * tries almost always store ALPHABETICAL data
         * value stores in a node is a single eltter
         * references are pointers to other letters that make up a word
-
-    * Adding to a Trie
-        * first, check if element to be added is alr there
-        * then add it
+* Adding to a Trie
+    * first, check if word to be added is alr there
+    * then add it
+* Where Tries Stop
+    * at the end of a path (like a binary tree)
+    * OR, they can stop at a specified node that we indicate by adding a property to the node
+        * ex. a trie of letters comprising multiple words, where 1 path = PICKED
+        * PICK is also a word, so we would add an isWord property to the K node in that path so the trie knows this is a complete word and can return it there
+* Tries in Action
+    * ex. typing search query into Google and the autocomplete suggestions that come up
+        * each letter type retrieves a subset of a much larger trie
+    * Tries are usually used in conjunction w another data structure or some type of search algo
