@@ -448,3 +448,9 @@
             * height of a node: longest possible path forward in the tree before reaching a leaf node
                 * use setHeight method to do this for u
                 * height DOES NOT INCLUDE ROOT NODE!!
+    * When you add a new node to an AVL tree, it can either keep it balanced or throw it off balances
+        * 4 scenarios for imbalance:
+            * Left-left imbalance
+            * Left-right imbalance
+            * Right-right imbalance
+            * Right-left imbalance
