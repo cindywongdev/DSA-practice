@@ -462,3 +462,7 @@
                 * the fix:
                     * 1. swap outer 2 nodes
                     * 2. then rotate everything to the right
+        * So everytime a node is added, the AVL tree
+            * checks for balance
+            * if unbalanced, perform one of the fixes,
+            * thus, tree is always balanced!
