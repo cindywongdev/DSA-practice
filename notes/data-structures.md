@@ -444,4 +444,5 @@
         * calculates the difference in heights between left and right sides
             * if diff is 0 or 1: tree is balanced
             * if diff > 1: tree is unbalanced
-            
+        * usually, the height of a given node is stored as a property within the node itself (like how it stores L and R props)
+        
