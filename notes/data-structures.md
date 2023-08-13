@@ -445,5 +445,6 @@
             * if diff is 0 or 1: tree is balanced
             * if diff > 1: tree is unbalanced
         * usually, the height of a given node is stored as a property within the node itself (like how it stores L and R props)
-        * height of a node: longest possible path forward in the tree before reaching a leaf node
-            * use setHeight method to do this for u
+            * height of a node: longest possible path forward in the tree before reaching a leaf node
+                * use setHeight method to do this for u
+                * height DOES NOT INCLUDE ROOT NODE!!
