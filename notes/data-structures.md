@@ -438,3 +438,4 @@
     * but there are cons
         * depending on size of unbalanced tree, the # of rotations required to fix it might be expensive to process
         * also, you first have to start by checking if tree is balanced, which can be an expensive operation in itself
+* The Self-Balancing Tree
