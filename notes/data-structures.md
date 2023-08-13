@@ -439,3 +439,9 @@
         * depending on size of unbalanced tree, the # of rotations required to fix it might be expensive to process
         * also, you first have to start by checking if tree is balanced, which can be an expensive operation in itself
 * The Self-Balancing Tree
+    * AVL Tree (named after inventors Adelson-Velsky and Landis)
+    * how does it work?
+        * calculates the difference in heights between left and right sides
+            * if diff is 0 or 1: tree is balanced
+            * if diff > 1: tree is unbalanced
+            
