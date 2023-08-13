@@ -433,4 +433,5 @@
     * definition: left and right sides are nearly the same length
         * now, search and insertion methods cut the tree in half each round, resulting in
         * 0(log(N))
+* Balancing a Tree
     * **Rotating**: the process of moving the nodes around on a tree until we find balance
