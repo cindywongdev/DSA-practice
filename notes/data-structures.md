@@ -453,6 +453,9 @@
             * Left-left imbalance
                 * the fix: rotate everything to the right
             * Left-right imbalance
-                
+                * the fix:
+                    * 1. swap outer 2 nodes
+                    * 2. then rotate everything to the right
             * Right-right imbalance
+                * rotate everything to the left
             * Right-left imbalance
