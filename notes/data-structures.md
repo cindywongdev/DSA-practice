@@ -435,3 +435,6 @@
         * 0(log(N))
 * Balancing a Tree
     * **Rotating**: the process of moving the nodes around on a tree until we find balance
+    * but there are cons
+        * depending on size of unbalanced tree, the # of rotations required to fix it might be expensive to process
+        * also, you first have to start by checking if tree is balanced, which can be an expensive operation in itself
