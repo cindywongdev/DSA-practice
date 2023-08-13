@@ -421,3 +421,11 @@
     * Tries are usually used in conjunction w another data structure or some type of search algo
 
 ### Balancing Binary Trees
+
+* What does an unbalanced tree look like?
+    * Ex. if we keep adding nodes to a tree that were greater than the prev node
+        * all nodes would move to the right, v unbalanced
+        * tree basically becomes a giant linked list
+            * we lose all efficiency gains that come along w a tree structure
+            * would potentially have to iterate through entire thing to find a node
+            * O(N)
