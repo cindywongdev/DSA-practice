@@ -429,3 +429,8 @@
             * we lose all efficiency gains that come along w a tree structure
             * would potentially have to iterate through entire thing to find a node
             * O(N)
+* Balanced Tree
+    * definition: left and right sides are nearly the same length
+        * now, search and insertion methods cut the tree in half each round, resulting in
+        * 0(log(N))
+    
