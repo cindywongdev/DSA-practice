@@ -451,6 +451,10 @@
     * When you add a new node to an AVL tree, it can either keep it balanced or throw it off balances
         * 4 scenarios for imbalance:
             * Left-left imbalance
+                * the fix: rotate everything to the right
             * Left-right imbalance
+                * the fix:
+                    * 1. swap outer 2 nodes
+                    * 2. then rotate everything to the right
             * Right-right imbalance
             * Right-left imbalance
