@@ -545,4 +545,5 @@
     * values in node/subarray = edges to other nodes
     * 1 = edge, 0 = lack of an edge
   * This example is also an undirected graph (goes both ways)
-    
+    * secret clue: all adj matrices for undirected graphs have a diagonal line running down the middle (L to R) - either all 0s or all 1s
+    * also, across this diag, the two sides are perfectly symmetrical since each connection goes both ways
