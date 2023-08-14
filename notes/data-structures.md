@@ -551,3 +551,10 @@
   * graphs can look wildly diff depending on their purpose, but here are methods for building a graph common across most implementations:
     * .addNode(N): add a node, N, to the graph
     * .addEdge(src, dest): add an edge between the nodes src and dest (destination)
+* Traversing a Graph
+  * just like binary trees, there are the same 2 methods for traversing graphs:
+    * breadth-first search
+    * depth-first search
+  * Same rules apply as w/ binary trees
+    * closer to start of graph: breadth first
+    * v wide graph thts not v deep: depth-first
