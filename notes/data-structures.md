@@ -547,3 +547,7 @@
   * This example is also an undirected graph (goes both ways)
     * secret clue: all adj matrices for undirected graphs have a diagonal line running down the middle (L to R) - either all 0s or all 1s
     * also, across this diag, the two sides are perfectly symmetrical since each connection goes both ways
+* Making a Graph
+  * graphs can look wildly diff depending on their purpose, but here are methods for building a graph common across most implementations:
+    * .addNode(N): add a node, N, to the graph
+    * .addEdge(src, dest): add an edge between the nodes src and dest (destination)
