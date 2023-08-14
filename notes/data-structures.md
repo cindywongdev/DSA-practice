@@ -502,3 +502,11 @@
             * represented by a 2 dimensional array
     * difference is big O efficiency
     
+    | Operation   | Adj List | Adj Matrix |
+    |-------------|----------|------------|
+    | Lookup      | 0(N)     | 0(1)       |
+    | Add node    | 0(1)     | 0(N^2)     |
+    | Remove node | 0(N+E)   | 0(N^2)     |
+    | Add edge    | 0(1)     | 0(1)       |
+    | Remove edge | 0(E)     | 0(1)       |
+    | Memory      | 0(N+E)   | 0(N^2)     |
