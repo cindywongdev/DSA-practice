@@ -471,3 +471,11 @@
 
 * What is a graph?
     * a collection of nodes, which store data, and edges, which represent relationships or connections between nodes
+    * widely used in modern SWE
+    * IRL examples
+        * booking flight online
+        * following someone on IG (or any social media)
+        * Google Maps
+            * nodes are locations, edges are roads/routes (connections between those locations)
+    * very powerful and flexible data structure
+        * but very complicated
