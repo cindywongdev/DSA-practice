@@ -486,3 +486,11 @@
 * Edges in a Graph are either...
     * Undirected: a mutual connection between nodes
     * Directed: pointing from one node to another
+* Graph Types
+    * Undirected Graph
+        * all edges are undirected
+        * do not point from one node to another
+            * ex. like a "friend" graph on FB, all friend relationships are mutual
+    * Directed Graph
+        * all edges are directed
+            * ex. liking someones post on fb
