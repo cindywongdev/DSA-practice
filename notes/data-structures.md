@@ -483,3 +483,6 @@
     * both have nodes and edges
         * but the edges in a graph are a lot more FLEXIBLE
     * Trees are hierchical in nature, but graphs represent relationships in general
+* Edges in a Graph are either...
+    * Undirected: a mutual connection between nodes
+    * Directed: pointing from one node to another
