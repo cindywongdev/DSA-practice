@@ -468,3 +468,6 @@
             * thus, tree is always balanced!
 
 ### Graphs
+
+* What is a graph?
+    * a collection of nodes, which store data, and edges, which represent relationships or connections between nodes
