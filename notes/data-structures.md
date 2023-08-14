@@ -479,3 +479,7 @@
             * nodes are locations, edges are roads/routes (connections between those locations)
     * very powerful and flexible data structure
         * but very complicated
+* Graphs vs. Trees
+    * both have nodes and edges
+        * but the edges in a graph are a lot more FLEXIBLE
+    * Trees are hierchical in nature, but graphs represent relationships in general
