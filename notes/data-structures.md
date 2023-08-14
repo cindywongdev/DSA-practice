@@ -521,12 +521,28 @@
   * graph is rep by a collection of arrays for each node
   * ex.
         let graph = {
-        'A': ['B', 'E'],
-        'B': ['A', 'C', 'D', 'E'],
-        'C': ['B', 'D'],
-        'D': ['B', 'C', 'E'],
-        'E': ['A', 'B', 'D'],
-      }
+          'A': ['B', 'E'],
+          'B': ['A', 'C', 'D', 'E'],
+          'C': ['B', 'D'],
+          'D': ['B', 'C', 'E'],
+          'E': ['A', 'B', 'D'],
+        }
   * each key-value pair = a node
     * key = value of node
     * value = array of edges to other nodes
+  * This example is an undirected graph (goes both ways)
+* The Adjacency Matrix Representation
+  * graph is rep by a 2D array (an array of arrays)
+  * ex.
+       let graph = [
+        [0, 1, 0, 0, 1 ],
+        [1, 0, 1, 1, 1 ],
+        [0, 1, 0, 1, 0 ],
+        [0, 1, 1, 0, 1 ],
+        [1, 1, 0, 1, 0 ],
+      ]
+  * each subarray = node
+    * values in node/subarray = edges to other nodes
+    * 1 = edge, 0 = lack of an edge
+  * This example is also an undirected graph (goes both ways)
+    
