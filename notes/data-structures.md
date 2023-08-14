@@ -494,3 +494,11 @@
     * Directed Graph
         * all edges are directed
             * ex. liking someones post on fb
+* Representing Graphs
+    * 2 ways:
+        * Adjacency list
+            * uses a collection of arrays for each node
+        * Ajdacency matrix
+            * represented by a 2 dimensional array
+    * difference is big O efficiency
+    
