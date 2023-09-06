@@ -13,7 +13,9 @@
   * a collection of items that can be accessed individually via an index that lists the position of items in that array
   * Key Characteristics
     * are indexed (most languages start at 0)
-    * are either fixed size (Java, C) or changeable size (JavaScript, Ruby)
+    * are either
+      * static: fixed size (Java, C) 
+      * dynamic: changeable size (JavaScript, Ruby, Python)
     * are usually restricted to one data type (only integers, strings, Booleans, etc.)
   * Typical Operations (consistent across most prog languages)
     * myArray = [1,2] // creates a new array with the values of 1 and 2
