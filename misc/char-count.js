@@ -44,6 +44,19 @@ function charCount(string){
       return answer
     }
     
+
+// alt solution using array methods
+function charCount2(string) {
+  return string.split('').reduce((prev, letter)=> {
+    if(prev[letter]) {
+      prev[letter] ++
+    } else {
+      prev[letter] = 1
+    }
+    return prev
+  },{})
+}
+
     /*------------------------------------------
     
     Running the repl should result in the 
@@ -54,3 +67,6 @@ function charCount(string){
     ------------------------------------------*/
     
     console.log(charCount("Let's Gooooooo!!"))
+
+
+    
