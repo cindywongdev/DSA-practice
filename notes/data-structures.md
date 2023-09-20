@@ -23,11 +23,14 @@
     * myArray.length // returns the size of the array
     * myArray[i] // returns the value at index [i] in the array
     * myArray[i] = value // sets the value at index [i] to new value
-    * Big 0 Notation
+    * Big 0 Notation (for Static)
       * r/w at i-th location: 0(1)
         * due to nature of ram, u can just access it directly :)
       * insert/remove at end (assuming we have an empty space at the end): 0(1)
       * insert/remove at beginning/middle: 0(n)
+    * Big 0 (for Dynamic)
+      * push + pop: O(1)
+        * bc there is always a pointer pointing to the last element in the array to keep track of it
   * Using Arrays
     * a great choice for storing data when you KNOW the exact SIZE of the data set
       * ex. array of average temp in past week:
